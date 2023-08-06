@@ -1,0 +1,17 @@
+.ToDoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.newToDo{
+    background-color: beige;
+}
+
+/* Enables strike through */
+input:checked + label{
+    /* note the + means adjacent siblings*/
+    text-decoration: line-through;
+}
