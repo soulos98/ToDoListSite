@@ -24,6 +24,4 @@ app.post("/newEntry", (req, res) => {
 
     res.render("index.ejs", {newToDoEntry: lst});
     console.log("All went well!");
-
-
 });
