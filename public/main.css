@@ -50,6 +50,7 @@ input:checked + label{
 
 li > a {
     text-decoration: none;
+    color: #967E76;
 }
 
 #date, #workTitle{
@@ -63,4 +64,14 @@ li > a {
 
 #copyrightLogo{
     color: #967E76;
+}
+
+button{
+    background-color: #B7C4CF; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

@@ -3,9 +3,9 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-
-let TodayList = []; // Global list keeps track of all current toDo's
-let WorkList = [];
+// Global list keeps track of all current toDo's
+let TodayList = []; // Keeps track of "/" route's toDo's
+let WorkList = [];  // Keeps track of "/work" route's toDo's
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public/")); // Sets up the location of our css files
