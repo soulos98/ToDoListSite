@@ -29,3 +29,14 @@ input:checked + label{
     height: 30px;
     font-size: 13pt;
 }
+
+#navlinks > li{
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 2rem;
+}
+
+li > a {
+    text-decoration: none;
+}
