@@ -29,7 +29,9 @@ app.post("/newEntry", (req, res) => {
 });
 
 app.get("/work", (req, res) => {
-  WorkList.length > 0 ? res.render("work.ejs", {newToDoEntry: WorkList}) : res.render("work.ejs");
+  WorkList.length > 0
+    ? res.render("work.ejs", { newToDoEntry: WorkList })
+    : res.render("work.ejs");
 });
 
 app.post("/newWorkEntry", (req, res) => {

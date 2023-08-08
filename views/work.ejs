@@ -3,31 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css"> <!--line 10 in index.js makes it point to our public directory by default -->
+    <link rel="stylesheet" href="main.css" />
+    <!--line 10 in index.js makes it point to our public directory by default -->
     <title>ToDoList!</title>
   </head>
   <body>
-
     <%- include('partials/header.ejs') %>
     <div class="ToDoContainer">
-        <h2>Work List</h2>
-        <div class="newToDo">
-            <% if(locals.newToDoEntry) { %>
-            <div>
-                <% newToDoEntry.forEach(element => { %>
-                    <p class="userItem">
-                        <input type="checkbox">
-                        <label><%= element %></label>
-                    </p>
-                <% }) %>
-            </div>
-            <% } %>
-            <form action="/newWorkEntry" method="POST">
-                <input type="text" name="todo" id="todo" placeholder='ToDo'/>
-                <button>+</button>
-            </form>
+      <h2 id="workTitle">Work List</h2>
+      <div class="newToDo">
+        <% if(locals.newToDoEntry) { %>
+        <div>
+          <% newToDoEntry.forEach(element => { %>
+          <p class="userItem">
+            <input type="checkbox" />
+            <label><%= element %></label>
+          </p>
+          <% }) %>
         </div>
-        
+        <% } %>
+        <form action="/newWorkEntry" method="POST">
+          <input type="text" name="todo" id="todo" placeholder="ToDo" />
+          <button>+</button>
+        </form>
+      </div>
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>
